@@ -52,14 +52,14 @@ There are three main source categories for contextual data: third-party business
   - Location
   - Milestones
  
- - IoT 
+- IoT
   - Delivery trackers
   - Asset and inventory management sensors
   - Kiosk interactions
   - GPS tools
   - Context-aware promotion tools
   
- - Insight Data
+- Insight Data
   - Images
   - Audio
   - Texts
