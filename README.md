@@ -90,5 +90,7 @@ There are three main source categories for contextual data: third-party business
    - Mobile side: Federated Learning model, data with private key
    - Data Transfer: Fully Homomorphic Encryption 
    - Server side: Encryption Data with public key
+   
+ ![img](https://github.com/Pyligent/privacy-preserving-poc/blob/master/pocv10.png)
 
 
