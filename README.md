@@ -1,3 +1,5 @@
+## PoC Design 
+
 ## Homomorphic Encryption:
 The key is to allow the computation on the encryption data. Thus the data can remain confidential while it is processed. In mathematics, homomorphic is the transformation of one dataset into another while preserving the relationship between elements in both sets. 
 
@@ -63,5 +65,30 @@ There are three main source categories for contextual data: third-party business
   - Images
   - Audio
   - Texts
+
+### PoC Data Model
+
+- Location
+  - Location address with Place of Interests
+- Images - inference the recent images 
+  - Dectection: Person, Objects, Animals and others 
+- App activities
+  - Apps types and screen time
+ 
+ ### Archtecture 
+ 
+ - Mobile Side:
+   - detection model for images detection/classification 
+   - machine learning model for inference: 
+     data: images detection results, time, location(POI types - supermarkets, gym, pet store, coffee shops), app types(social media, gaming etc.) , google search key words
+     
+ - Server side:
+   - Dashborad for encryption data
+   - Data Analytic Pipeline
+   
+ - End-to-end Privacy Preservering Pipeline
+   - Mobile side: Federated Learning model, data with private key
+   - Data Transfer: Fully Homomorphic Encryption 
+   - Server side: Encryption Data with public key
 
 
