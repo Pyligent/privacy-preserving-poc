@@ -1,0 +1,2 @@
+rootProject.name='AppLauncherGoogle'
+include ':app'
