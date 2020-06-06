@@ -1,0 +1,34 @@
+paths:
+  root_dir: '../../'
+  toy_data_path_agg: 'toy_data/'
+  solutions_path: 'model_output/'
+
+setup:
+  behaviors: ['IA', 'IC', 'RA', 'RC']
+  quarters: {'Q1': [1, 2, 3], 'Q2': [4, 5, 6], 'Q3': [7, 8, 9], 'Q4': [10, 11, 12]}
+
+parameters:
+  ## Example set of parameters for training MLE approach
+  #5: 2 #Number of times to repeat sampling over eta (pg 16 of paper)
+  #start_month: 1 #Assumed to be 1.  Corresponds to the start of the summation in Eq. 2 of paper.
+  #M_tot: 51 #int, total months to train on
+  #obs_start: 2 #Observed start month we have panel data for
+  #obs_end: 51 #Observed end month we have panel data for
+  #q: 17 #Int, corresponding number of quarters, q<= M_tot/3
+
+  ## Example set of parameters for testing MLE approach given above training parameters
+  #K: 5 #Number of times to repeat sampling over eta (pg 16 of paper)
+  #start_month: 1 #Assumed to be 1.  Corresponds to the start of the summation in Eq. 2 of paper.
+  #M_tot: 60 #int, total months to train on
+  #obs_start: 2 #Observed start month we have panel data for
+  #obs_end: 60 #Observed end month we have panel data for
+  #q: 20  #Int, corresponding number of quarters, q<= M_tot/3
+
+
+  ## Example set of parameters for testing MLE approach given above training parameters
+  K: 5 #Number of times to repeat sampling over eta (pg 16 of paper)
+  start_month: 1 #Assumed to be 1.  Corresponds to the start of the summation in Eq. 2 of paper.
+  M_tot: 20 #int, total months to train on
+  obs_start: 2 #Observed start month we have panel data for
+  obs_end: 20 #Observed end month we have panel data for
+  q: 6  #Int, corresponding number of quarters, q<= M_tot/3
