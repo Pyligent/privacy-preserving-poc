@@ -15,12 +15,14 @@ public class RegisterActivity extends AppCompatActivity {
     EditText username, password, email, country, dob;
     RadioGroup gender;
     Button register, cancel;
-    DatabaseConnector databaseConn = new DatabaseConnector(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        final DatabaseConnector databaseConn = new DatabaseConnector(this);
+
 
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
@@ -31,14 +33,15 @@ public class RegisterActivity extends AppCompatActivity {
         register = findViewById(R.id.register);
         cancel = findViewById(R.id.cancel);
 
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String usernameValue = username.getText().toString();
                 String passValue = password.getText().toString();
-                String emailvalue = username.getText().toString();
-                String countryValue = password.getText().toString();
-                String dobValue = username.getText().toString();
+                String emailvalue = email.getText().toString();
+                String countryValue = country.getText().toString();
+                String dobValue = dob.getText().toString();
                 RadioButton checkBtn = findViewById(gender.getCheckedRadioButtonId());
                 String genderValue = checkBtn.getText().toString();
 
@@ -51,6 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
                     contentValues.put("country",countryValue);
                     contentValues.put("dob",dobValue);
                     contentValues.put("gender",genderValue);
+
 
                     databaseConn.insertNewUser(contentValues);
                     Toast.makeText(RegisterActivity.this, "User is registered!", Toast.LENGTH_SHORT).show();

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -25,14 +26,17 @@ public class DatabaseConnector extends SQLiteOpenHelper {
             "\t\"gender\"\tTEXT\n" +
             ")";
 
-    public DatabaseConnector(@Nullable Context context) {
+    public DatabaseConnector(Context context) {
         super(context, name, null, version);
-
+        System.out.println(createTableUserInfo);
         getWritableDatabase().execSQL(createTableUserInfo);
     }
 
     public void insertNewUser(ContentValues contentValues) {
-        getWritableDatabase().insert("user_info","",contentValues);
+        System.out.println("Kuch to bataoo!");
+        System.out.println(contentValues);
+        long pk = getWritableDatabase().insert("user_info","",contentValues);
+        System.out.println(pk);
     }
 
     public boolean isLoginValid(String username, String password) {
